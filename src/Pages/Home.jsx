@@ -1,11 +1,9 @@
 import React from 'react'
+import Header from '../components/Header';
 
 const Home = () =>{
     return(
-        <div>
-            <h1>This is Home</h1>
-            <h2>React E-shop</h2>
-        </div>
+        <Header />
     );
 }
 
