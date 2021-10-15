@@ -38,6 +38,20 @@ nav {
   border: 1px solid var(--hospital-green);
   color: var(--hospital-green);
 }
+
+.navbar-right ul li{
+  padding: 8px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.navbar-right ul li:nth-child(1):hover {
+  
+ 
+  border: 1px solid var(--hospital-green);
+  color: var(--hospital-green);
+}
+
 .navbar-email {
   color: var(--very-light-pink);
   font-size: var(--sm);
@@ -54,8 +68,8 @@ nav {
   font-size: var(--sm);
   font-weight: bold;
   position: absolute;
-  top: -6px;
-  right: -3px;
+  top: 1px;
+  right: 1px;
   display: flex;
   justify-content: center;
   align-items: center;
