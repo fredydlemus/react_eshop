@@ -25,15 +25,15 @@ const App = () => {
                 <Layout>
                     <Switch>
 
-                        <Route exact path="/" component={Home} />
-                        <Route exact path="/login" component={Login} />
-                        <Route exact path="/password-recovery" component={PasswordRecovery} />
-                        <Route exact path="/create-account" component={CreateAccount} /> 
-                        <Route exact path="/new-password" component={NewPassword} />
-                        <Route exact path="/my-account" component={MyAccount} />
-                        <Route exact path="/send-email" component={SendEmail} />
-                        <Route exact path="/orders" component={Orders} />
-                        <Route exact path="/checkout" component={Checkout} />
+                        <Route exact path="/react_eshop/" component={Home} />
+                        <Route exact path="/react_eshop/login" component={Login} />
+                        <Route exact path="/react_eshop/password-recovery" component={PasswordRecovery} />
+                        <Route exact path="/react_eshop/create-account" component={CreateAccount} /> 
+                        <Route exact path="/react_eshop/new-password" component={NewPassword} />
+                        <Route exact path="/react_eshop/my-account" component={MyAccount} />
+                        <Route exact path="/react_eshop/send-email" component={SendEmail} />
+                        <Route exact path="/react_eshop/orders" component={Orders} />
+                        <Route exact path="/react_eshop/checkout" component={Checkout} />
                         <Route component={NotFound} />
 
                     </Switch>
