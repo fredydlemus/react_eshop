@@ -12,27 +12,34 @@ import PasswordRecovery from "../Pages/PasswordRecovery";
 import MyAccount from "../Pages/MyAccount";
 import SendEmail from "../Pages/SendEmail";
 import Orders from "../Pages/Orders";
+import AppContext from "../context/AppContext";
+import useInitialState from "../hooks/useInitialState";
 
 const App = () => {
+
+    const initialState = useInitialState();
+
     return (
-        <BrowserRouter>
-            <Layout>
-                <Switch>
+        <AppContext.Provider value = {initialState}>
+            <BrowserRouter>
+                <Layout>
+                    <Switch>
 
-                    <Route exact path="/" component={Home} />
-                    <Route exact path="/login" component={Login} />
-                    <Route exact path="/password-recovery" component={PasswordRecovery} />
-                    <Route exact path="/create-account" component={CreateAccount} /> 
-                    <Route exact path="/new-password" component={NewPassword} />
-                    <Route exact path="/my-account" component={MyAccount} />
-                    <Route exact path="/send-email" component={SendEmail} />
-                    <Route exact path="/orders" component={Orders} />
-                    <Route exact path="/checkout" component={Checkout} />
-                    <Route component={NotFound} />
+                        <Route exact path="/" component={Home} />
+                        <Route exact path="/login" component={Login} />
+                        <Route exact path="/password-recovery" component={PasswordRecovery} />
+                        <Route exact path="/create-account" component={CreateAccount} /> 
+                        <Route exact path="/new-password" component={NewPassword} />
+                        <Route exact path="/my-account" component={MyAccount} />
+                        <Route exact path="/send-email" component={SendEmail} />
+                        <Route exact path="/orders" component={Orders} />
+                        <Route exact path="/checkout" component={Checkout} />
+                        <Route component={NotFound} />
 
-                </Switch>
-            </Layout>
-        </BrowserRouter>
+                    </Switch>
+                </Layout>
+            </BrowserRouter>
+        </AppContext.Provider>
 
     );
 }

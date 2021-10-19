@@ -6,7 +6,8 @@ const Login = () => {
 
     const form = useRef(null);
 
-    const handleSubmit = () =>{
+    const handleSubmit = (event) =>{
+        event.preventDefault();
         const formData = new FormData(form.current);
         const data = {
             username: formData.get('email'),
@@ -21,9 +22,9 @@ const Login = () => {
                 <img src={logo} alt="logo" className="logo" />
 
                 <form action="/" className="form" ref={form}>
-                    <label for="email" className="label">Email Address</label>
+                    <label htmlFor="email" className="label">Email Address</label>
                     <input type="text" name="email" placeholder="fredy@example.com" className="input input-password" />
-                    <label for="password" className="label">Password</label>
+                    <label htmlFor="password" className="label">Password</label>
                     <input type="password" name="password" placeholder="*********" className="input input-password" />
                     <button 
                         onClick={handleSubmit}
